@@ -3215,7 +3215,7 @@
         "kind": 2,
         "importPath": "bot.keyboards.inline.contacts",
         "description": "bot.keyboards.inline.contacts",
-        "peekOfCode": "def contacts_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use when call contacts command.\"\"\"\n    buttons = [\n        [InlineKeyboardButton(text=_(\"support button\"),\n                              url=settings.SUPPORT_URL)],\n    ]\n    keyboard = InlineKeyboardBuilder(markup=buttons)\n    return keyboard.as_markup()\ndef back_button_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use when call support query.\"\"\"",
+        "peekOfCode": "def contacts_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use when call contacts command.\"\"\"\n    buttons = [\n        [InlineKeyboardButton(text=_(\"support button\"), url=settings.SUPPORT_URL)],\n    ]\n    keyboard = InlineKeyboardBuilder(markup=buttons)\n    return keyboard.as_markup()\ndef back_button_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use when call support query.\"\"\"\n    buttons = [",
         "detail": "bot.keyboards.inline.contacts",
         "documentation": {}
     },
@@ -3233,7 +3233,7 @@
         "kind": 2,
         "importPath": "bot.keyboards.inline.menu",
         "description": "bot.keyboards.inline.menu",
-        "peekOfCode": "def main_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use in main menu.\"\"\"\n    buttons = [\n        [InlineKeyboardButton(text=_(\"chatgpt button\"),\n                              callback_data=\"chatgpt\")],\n        [InlineKeyboardButton(text=_(\"text insert button\"),\n                              callback_data=\"text_insert\")],\n        [InlineKeyboardButton(text=_(\"settings button\"),\n                              callback_data=\"settings\")],\n        [InlineKeyboardButton(text=_(\"text output button\"),",
+        "peekOfCode": "def main_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use in main menu.\"\"\"\n    buttons = [\n        [InlineKeyboardButton(text=_(\"chatgpt button\"), callback_data=\"chatgpt\")],\n        [InlineKeyboardButton(text=_(\"text insert button\"), callback_data=\"text_insert\")],\n        [InlineKeyboardButton(text=_(\"settings button\"), callback_data=\"settings\")],\n        [InlineKeyboardButton(text=_(\"text output button\"), callback_data=\"text_output\")],\n    ]\n    keyboard = InlineKeyboardBuilder(markup=buttons)\n    keyboard.adjust(1, 1, 2)",
         "detail": "bot.keyboards.inline.menu",
         "documentation": {}
     },
@@ -3242,7 +3242,7 @@
         "kind": 2,
         "importPath": "bot.keyboards.inline.settings",
         "description": "bot.keyboards.inline.settings",
-        "peekOfCode": "def settings_keyboard() -> InlineKeyboardMarkup:\n    buttons = [\n        [InlineKeyboardButton(text=_(\"word count button\"),\n                              callback_data=\"word_count\")],\n        [InlineKeyboardButton(text=_(\"schedule button\"),\n                              callback_data=\"schedule\")],\n        [InlineKeyboardButton(text=_(\"back button\"),\n                              callback_data=\"menu\")],\n    ]\n    keyboard = InlineKeyboardBuilder(markup=buttons)",
+        "peekOfCode": "def settings_keyboard() -> InlineKeyboardMarkup:\n    buttons = [\n        [InlineKeyboardButton(text=_(\"word count button\"), callback_data=\"word_count\")],\n        [InlineKeyboardButton(text=_(\"schedule button\"), callback_data=\"schedule\")],\n        [InlineKeyboardButton(text=_(\"back button\"), callback_data=\"menu\")],\n    ]\n    keyboard = InlineKeyboardBuilder(markup=buttons)\n    keyboard.adjust(1, 1, 1)\n    return keyboard.as_markup()",
         "detail": "bot.keyboards.inline.settings",
         "documentation": {}
     },

@@ -8,8 +8,7 @@ from bot.core.config import settings
 def contacts_keyboard() -> InlineKeyboardMarkup:
     """Use when call contacts command."""
     buttons = [
-        [InlineKeyboardButton(text=_("support button"),
-                              url=settings.SUPPORT_URL)],
+        [InlineKeyboardButton(text=_("support button"), url=settings.SUPPORT_URL)],
     ]
 
     keyboard = InlineKeyboardBuilder(markup=buttons)
