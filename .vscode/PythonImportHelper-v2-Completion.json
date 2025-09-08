@@ -1288,6 +1288,22 @@
         "documentation": {}
     },
     {
+        "label": "Router",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "types",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
         "label": "BaseMiddleware",
         "importPath": "aiogram",
         "description": "aiogram",
@@ -1417,6 +1433,14 @@
     },
     {
         "label": "LOCALES_DIR",
+        "importPath": "bot.core.config",
+        "description": "bot.core.config",
+        "isExtraImport": true,
+        "detail": "bot.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
         "importPath": "bot.core.config",
         "description": "bot.core.config",
         "isExtraImport": true,
@@ -1672,6 +1696,30 @@
         "documentation": {}
     },
     {
+        "label": "CallbackQuery",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardButton",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardMarkup",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
         "label": "InlineKeyboardButton",
         "importPath": "aiogram.types",
         "description": "aiogram.types",
@@ -1856,6 +1904,22 @@
         "documentation": {}
     },
     {
+        "label": "gettext",
+        "importPath": "aiogram.utils.i18n",
+        "description": "aiogram.utils.i18n",
+        "isExtraImport": true,
+        "detail": "aiogram.utils.i18n",
+        "documentation": {}
+    },
+    {
+        "label": "gettext",
+        "importPath": "aiogram.utils.i18n",
+        "description": "aiogram.utils.i18n",
+        "isExtraImport": true,
+        "detail": "aiogram.utils.i18n",
+        "documentation": {}
+    },
+    {
         "label": "AdminFilter",
         "importPath": "bot.filters.admin",
         "description": "bot.filters.admin",
@@ -1885,6 +1949,38 @@
         "description": "bot.keyboards.inline.menu",
         "isExtraImport": true,
         "detail": "bot.keyboards.inline.menu",
+        "documentation": {}
+    },
+    {
+        "label": "main_keyboard",
+        "importPath": "bot.keyboards.inline.menu",
+        "description": "bot.keyboards.inline.menu",
+        "isExtraImport": true,
+        "detail": "bot.keyboards.inline.menu",
+        "documentation": {}
+    },
+    {
+        "label": "settings_keyboard",
+        "importPath": "bot.keyboards.inline.settings",
+        "description": "bot.keyboards.inline.settings",
+        "isExtraImport": true,
+        "detail": "bot.keyboards.inline.settings",
+        "documentation": {}
+    },
+    {
+        "label": "back_button_keyboard",
+        "importPath": "bot.keyboards.inline.contacts",
+        "description": "bot.keyboards.inline.contacts",
+        "isExtraImport": true,
+        "detail": "bot.keyboards.inline.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "contacts_keyboard",
+        "importPath": "bot.keyboards.inline.contacts",
+        "description": "bot.keyboards.inline.contacts",
+        "isExtraImport": true,
+        "detail": "bot.keyboards.inline.contacts",
         "documentation": {}
     },
     {
@@ -1921,11 +2017,11 @@
         "documentation": {}
     },
     {
-        "label": "contacts_keyboard",
-        "importPath": "bot.keyboards.inline.contacts",
-        "description": "bot.keyboards.inline.contacts",
+        "label": "InlineKeyboardBuilder",
+        "importPath": "aiogram.utils.keyboard",
+        "description": "aiogram.utils.keyboard",
         "isExtraImport": true,
-        "detail": "bot.keyboards.inline.contacts",
+        "detail": "aiogram.utils.keyboard",
         "documentation": {}
     },
     {
@@ -3079,6 +3175,15 @@
         "documentation": {}
     },
     {
+        "label": "router",
+        "kind": 5,
+        "importPath": "bot.handlers.menu_callbacks",
+        "description": "bot.handlers.menu_callbacks",
+        "peekOfCode": "router = Router(name=\"menu_callbacks\")\n@router.callback_query(lambda c: c.data == \"chatgpt\")\nasync def chatgpt_callback(callback: CallbackQuery):\n    await callback.message.answer(_(\"Enter your question\"), reply_markup=back_button_keyboard())\n    await callback.answer()\n@router.callback_query(lambda c: c.data == \"text_insert\")\nasync def text_insert_callback(callback: CallbackQuery):\n    await callback.message.answer(_(\"You pressed Text Insert!\"))\n@router.callback_query(lambda c: c.data == \"settings\")\nasync def settings_callback(callback: CallbackQuery):",
+        "detail": "bot.handlers.menu_callbacks",
+        "documentation": {}
+    },
+    {
         "label": "MetricsView",
         "kind": 6,
         "importPath": "bot.handlers.metrics",
@@ -3110,16 +3215,16 @@
         "kind": 2,
         "importPath": "bot.keyboards.inline.contacts",
         "description": "bot.keyboards.inline.contacts",
-        "peekOfCode": "def contacts_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use when call contacts command.\"\"\"\n    buttons = [\n        [InlineKeyboardButton(text=_(\"support button\"), url=settings.SUPPORT_URL)],\n    ]\n    keyboard = InlineKeyboardBuilder(markup=buttons)\n    return keyboard.as_markup()\ndef support_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use when call support query.\"\"\"\n    buttons = [",
+        "peekOfCode": "def contacts_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use when call contacts command.\"\"\"\n    buttons = [\n        [InlineKeyboardButton(text=_(\"support button\"),\n                              url=settings.SUPPORT_URL)],\n    ]\n    keyboard = InlineKeyboardBuilder(markup=buttons)\n    return keyboard.as_markup()\ndef back_button_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use when call support query.\"\"\"",
         "detail": "bot.keyboards.inline.contacts",
         "documentation": {}
     },
     {
-        "label": "support_keyboard",
+        "label": "back_button_keyboard",
         "kind": 2,
         "importPath": "bot.keyboards.inline.contacts",
         "description": "bot.keyboards.inline.contacts",
-        "peekOfCode": "def support_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use when call support query.\"\"\"\n    buttons = [\n        [InlineKeyboardButton(text=_(\"support button\"), url=settings.SUPPORT_URL)],\n        [InlineKeyboardButton(text=_(\"back button\"), callback_data=\"menu\")],\n    ]\n    keyboard = InlineKeyboardBuilder(markup=buttons)\n    return keyboard.as_markup()",
+        "peekOfCode": "def back_button_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use when call support query.\"\"\"\n    buttons = [\n        [InlineKeyboardButton(text=_(\"back button\"), callback_data=\"menu\")],\n    ]\n    keyboard = InlineKeyboardBuilder(markup=buttons)\n    return keyboard.as_markup()",
         "detail": "bot.keyboards.inline.contacts",
         "documentation": {}
     },
@@ -3128,8 +3233,17 @@
         "kind": 2,
         "importPath": "bot.keyboards.inline.menu",
         "description": "bot.keyboards.inline.menu",
-        "peekOfCode": "def main_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use in main menu.\"\"\"\n    buttons = [\n        [InlineKeyboardButton(text=_(\"wallet button\"), callback_data=\"wallet\")],\n        [InlineKeyboardButton(text=_(\"premium button\"), callback_data=\"premium\")],\n        [InlineKeyboardButton(text=_(\"info button\"), callback_data=\"info\")],\n        [InlineKeyboardButton(text=_(\"support button\"), callback_data=\"support\")],\n    ]\n    keyboard = InlineKeyboardBuilder(markup=buttons)\n    keyboard.adjust(1, 1, 2)",
+        "peekOfCode": "def main_keyboard() -> InlineKeyboardMarkup:\n    \"\"\"Use in main menu.\"\"\"\n    buttons = [\n        [InlineKeyboardButton(text=_(\"chatgpt button\"),\n                              callback_data=\"chatgpt\")],\n        [InlineKeyboardButton(text=_(\"text insert button\"),\n                              callback_data=\"text_insert\")],\n        [InlineKeyboardButton(text=_(\"settings button\"),\n                              callback_data=\"settings\")],\n        [InlineKeyboardButton(text=_(\"text output button\"),",
         "detail": "bot.keyboards.inline.menu",
+        "documentation": {}
+    },
+    {
+        "label": "settings_keyboard",
+        "kind": 2,
+        "importPath": "bot.keyboards.inline.settings",
+        "description": "bot.keyboards.inline.settings",
+        "peekOfCode": "def settings_keyboard() -> InlineKeyboardMarkup:\n    buttons = [\n        [InlineKeyboardButton(text=_(\"word count button\"),\n                              callback_data=\"word_count\")],\n        [InlineKeyboardButton(text=_(\"schedule button\"),\n                              callback_data=\"schedule\")],\n        [InlineKeyboardButton(text=_(\"back button\"),\n                              callback_data=\"menu\")],\n    ]\n    keyboard = InlineKeyboardBuilder(markup=buttons)",
+        "detail": "bot.keyboards.inline.settings",
         "documentation": {}
     },
     {

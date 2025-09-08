@@ -25,7 +25,7 @@ msgstr "кол-во пользователей: <b>{count}</b>"
 
 #: bot/handlers/info.py:11
 msgid "about"
-msgstr "ℹ️ <b>About</b>"
+msgstr "ℹ️ <b>О боте</b>"
 
 #: bot/handlers/menu.py:13 bot/handlers/start.py:16
 msgid "title main keyboard"
@@ -37,24 +37,24 @@ msgstr "🤝 Поддержка"
 
 #: bot/keyboards/inline/contacts.py:11 bot/keyboards/inline/contacts.py:22
 #: bot/keyboards/inline/menu.py:12
-msgid "support button"
-msgstr "Support"
+msgid "text output button"
+msgstr "Вывести текст"
 
 #: bot/keyboards/inline/contacts.py:23
 msgid "back button"
 msgstr "🔙 Вернуться назад"
 
 #: bot/keyboards/inline/menu.py:9
-msgid "wallet button"
-msgstr "👛 Мой кошелёк"
+msgid "chatgpt button"
+msgstr "🤖 ChatGPT"
 
 #: bot/keyboards/inline/menu.py:10
-msgid "premium button"
-msgstr "🆙 Получить PREMIUM"
+msgid "text insert button"
+msgstr "🆙 Ввести текст"
 
 #: bot/keyboards/inline/menu.py:11
-msgid "info button"
-msgstr "Info"
+msgid "settings button"
+msgstr "⚙️ Настройки"
 
 #: bot/middlewares/auth.py:41
 msgid "first message"

@@ -14,13 +14,6 @@ users_commands: dict[str, dict[str, str]] = {
         "settings": "setting information about you",
         "supports": "support contacts",
     },
-    "uk": {
-        "help": "help",
-        "contacts": "developer contact details",
-        "menu": "main menu with earning schemes",
-        "settings": "setting information about you",
-        "supports": "support contacts",
-    },
     "ru": {
         "help": "help",
         "contacts": "developer contact details",
@@ -32,10 +25,6 @@ users_commands: dict[str, dict[str, str]] = {
 
 admins_commands: dict[str, dict[str, str]] = {
     "en": {
-        "ping": "Check bot ping",
-        "stats": "Show bot stats",
-    },
-    "uk": {
         "ping": "Check bot ping",
         "stats": "Show bot stats",
     },
@@ -51,7 +40,8 @@ async def set_default_commands(bot: Bot) -> None:
 
     for language_code, commands in users_commands.items():
         await bot.set_my_commands(
-            [BotCommand(command=command, description=description) for command, description in commands.items()],
+            [BotCommand(command=command, description=description)
+             for command, description in commands.items()],
             scope=BotCommandScopeDefault(),
             language_code=language_code,
         )

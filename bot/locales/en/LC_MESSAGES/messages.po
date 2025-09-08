@@ -26,7 +26,11 @@ msgstr "user counter: <b>{count}"
 msgid "about"
 msgstr "ℹ️ <b>About</b>"
 
-#: bot/handlers/menu.py:13 bot/handlers/start.py:16
+#: bot/handlers/menu_callbacks.py:23
+msgid "settings keyboard"
+msgstr "⚙️ <b>Settings</b>."
+
+#: bot/handlers/menu.py:13 bot/handlers/start.py:16 bot/handlers/menu_callbacks.py:35
 msgid "title main keyboard"
 msgstr "📒 <b>Menu</b>."
 
@@ -36,24 +40,24 @@ msgstr "🤝 Support"
 
 #: bot/keyboards/inline/contacts.py:11 bot/keyboards/inline/contacts.py:22
 #: bot/keyboards/inline/menu.py:12
-msgid "support button"
-msgstr "Support"
+msgid "text output button"
+msgstr "Text output"
 
 #: bot/keyboards/inline/contacts.py:23
 msgid "back button"
 msgstr "🔙 Back"
 
 #: bot/keyboards/inline/menu.py:9
-msgid "wallet button"
-msgstr "👛 Wallet"
+msgid "chatgpt button"
+msgstr "🤖 ChatGPT"
 
 #: bot/keyboards/inline/menu.py:10
-msgid "premium button"
-msgstr "🆙 Get PREMIUM"
+msgid "text insert button"
+msgstr "🆙 Text insert"
 
 #: bot/keyboards/inline/menu.py:11
-msgid "info button"
-msgstr "Info"
+msgid "settings button"
+msgstr "⚙️ Settings"
 
 #: bot/middlewares/auth.py:41
 msgid "first message"
@@ -61,3 +65,4 @@ msgstr ""
 "👋 <b>Welcome to the bot.</b>\n"
 "\n"
 "To start using the bot you can start with /menu"
+
