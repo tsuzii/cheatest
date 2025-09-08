@@ -3179,7 +3179,7 @@
         "kind": 5,
         "importPath": "bot.handlers.menu_callbacks",
         "description": "bot.handlers.menu_callbacks",
-        "peekOfCode": "router = Router(name=\"menu_callbacks\")\n@router.callback_query(lambda c: c.data == \"chatgpt\")\nasync def chatgpt_callback(callback: CallbackQuery):\n    await callback.message.answer(_(\"Enter your question\"), reply_markup=back_button_keyboard())\n    await callback.answer()\n@router.callback_query(lambda c: c.data == \"text_insert\")\nasync def text_insert_callback(callback: CallbackQuery):\n    await callback.message.answer(_(\"You pressed Text Insert!\"))\n@router.callback_query(lambda c: c.data == \"settings\")\nasync def settings_callback(callback: CallbackQuery):",
+        "peekOfCode": "router = Router(name=\"menu_callbacks\")\n@router.callback_query(lambda c: c.data == \"chatgpt\")\nasync def chatgpt_callback(callback: CallbackQuery):\n    await callback.message.answer(_(\"Enter your question\"), reply_markup=back_button_keyboard())\n    await callback.answer()\n@router.callback_query(lambda c: c.data == \"text_insert\")\nasync def text_insert_callback(callback: CallbackQuery):\n    await callback.message.answer(_(\"Enter your text\"), reply_markup=back_button_keyboard())\n    await callback.answer()\n@router.callback_query(lambda c: c.data == \"settings\")",
         "detail": "bot.handlers.menu_callbacks",
         "documentation": {}
     },

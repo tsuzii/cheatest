@@ -18,7 +18,8 @@ async def chatgpt_callback(callback: CallbackQuery):
 
 @router.callback_query(lambda c: c.data == "text_insert")
 async def text_insert_callback(callback: CallbackQuery):
-    await callback.message.answer(_("You pressed Text Insert!"))
+    await callback.message.answer(_("Enter your text"), reply_markup=back_button_keyboard())
+    await callback.answer()
 
 
 @router.callback_query(lambda c: c.data == "settings")
@@ -33,6 +34,6 @@ async def text_output_callback(callback: CallbackQuery):
 
 
 @router.callback_query(lambda c: c.data == "menu")
-async def settings_callback(callback: CallbackQuery):
+async def menu_callback(callback: CallbackQuery):
     await callback.message.answer(_("title main keyboard"), reply_markup=main_keyboard())
     await callback.answer()
