@@ -1232,6 +1232,14 @@
         "documentation": {}
     },
     {
+        "label": "Router",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
         "label": "types",
         "importPath": "aiogram",
         "description": "aiogram",
@@ -1464,7 +1472,7 @@
         "documentation": {}
     },
     {
-        "label": "settings",
+        "label": "DEFAULT_LOCALE",
         "importPath": "bot.core.config",
         "description": "bot.core.config",
         "isExtraImport": true,
@@ -1472,7 +1480,7 @@
         "documentation": {}
     },
     {
-        "label": "DEFAULT_LOCALE",
+        "label": "settings",
         "importPath": "bot.core.config",
         "description": "bot.core.config",
         "isExtraImport": true,
@@ -1696,6 +1704,14 @@
         "documentation": {}
     },
     {
+        "label": "Message",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
         "label": "CallbackQuery",
         "importPath": "aiogram.types",
         "description": "aiogram.types",
@@ -1848,6 +1864,70 @@
         "documentation": {}
     },
     {
+        "label": "FSMContext",
+        "importPath": "aiogram.fsm.context",
+        "description": "aiogram.fsm.context",
+        "isExtraImport": true,
+        "detail": "aiogram.fsm.context",
+        "documentation": {}
+    },
+    {
+        "label": "FSMContext",
+        "importPath": "aiogram.fsm.context",
+        "description": "aiogram.fsm.context",
+        "isExtraImport": true,
+        "detail": "aiogram.fsm.context",
+        "documentation": {}
+    },
+    {
+        "label": "State",
+        "importPath": "aiogram.fsm.state",
+        "description": "aiogram.fsm.state",
+        "isExtraImport": true,
+        "detail": "aiogram.fsm.state",
+        "documentation": {}
+    },
+    {
+        "label": "StatesGroup",
+        "importPath": "aiogram.fsm.state",
+        "description": "aiogram.fsm.state",
+        "isExtraImport": true,
+        "detail": "aiogram.fsm.state",
+        "documentation": {}
+    },
+    {
+        "label": "ask_deepseek",
+        "importPath": "bot.services.deepseek_client",
+        "description": "bot.services.deepseek_client",
+        "isExtraImport": true,
+        "detail": "bot.services.deepseek_client",
+        "documentation": {}
+    },
+    {
+        "label": "back_button_keyboard",
+        "importPath": "bot.keyboards.inline.contacts",
+        "description": "bot.keyboards.inline.contacts",
+        "isExtraImport": true,
+        "detail": "bot.keyboards.inline.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "back_button_keyboard",
+        "importPath": "bot.keyboards.inline.contacts",
+        "description": "bot.keyboards.inline.contacts",
+        "isExtraImport": true,
+        "detail": "bot.keyboards.inline.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "contacts_keyboard",
+        "importPath": "bot.keyboards.inline.contacts",
+        "description": "bot.keyboards.inline.contacts",
+        "isExtraImport": true,
+        "detail": "bot.keyboards.inline.contacts",
+        "documentation": {}
+    },
+    {
         "label": "gettext",
         "importPath": "aiogram.utils.i18n",
         "description": "aiogram.utils.i18n",
@@ -1965,22 +2045,6 @@
         "description": "bot.keyboards.inline.settings",
         "isExtraImport": true,
         "detail": "bot.keyboards.inline.settings",
-        "documentation": {}
-    },
-    {
-        "label": "back_button_keyboard",
-        "importPath": "bot.keyboards.inline.contacts",
-        "description": "bot.keyboards.inline.contacts",
-        "isExtraImport": true,
-        "detail": "bot.keyboards.inline.contacts",
-        "documentation": {}
-    },
-    {
-        "label": "contacts_keyboard",
-        "importPath": "bot.keyboards.inline.contacts",
-        "description": "bot.keyboards.inline.contacts",
-        "isExtraImport": true,
-        "detail": "bot.keyboards.inline.contacts",
         "documentation": {}
     },
     {
@@ -2127,6 +2191,15 @@
         "description": "bot.utils.singleton",
         "isExtraImport": true,
         "detail": "bot.utils.singleton",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
         "documentation": {}
     },
     {
@@ -2864,7 +2937,7 @@
         "kind": 6,
         "importPath": "bot.core.config",
         "description": "bot.core.config",
-        "peekOfCode": "class EnvBaseSettings(BaseSettings):\n    model_config = SettingsConfigDict(env_file=\".env\", env_file_encoding=\"utf-8\", extra=\"ignore\")\nclass WebhookSettings(EnvBaseSettings):\n    USE_WEBHOOK: bool = False\n    WEBHOOK_BASE_URL: str = \"https://xxx.ngrok-free.app\"\n    WEBHOOK_PATH: str = \"/webhook\"\n    WEBHOOK_SECRET: str = \"\"\n    WEBHOOK_HOST: str = \"localhost\"\n    WEBHOOK_PORT: int = 8080\n    @property",
+        "peekOfCode": "class EnvBaseSettings(BaseSettings):\n    model_config = SettingsConfigDict(\n        env_file=\".env\", env_file_encoding=\"utf-8\", extra=\"ignore\")\nclass WebhookSettings(EnvBaseSettings):\n    USE_WEBHOOK: bool = False\n    WEBHOOK_BASE_URL: str = \"https://xxx.ngrok-free.app\"\n    WEBHOOK_PATH: str = \"/webhook\"\n    WEBHOOK_SECRET: str = \"\"\n    WEBHOOK_HOST: str = \"localhost\"\n    WEBHOOK_PORT: int = 8080",
         "detail": "bot.core.config",
         "documentation": {}
     },
@@ -2882,7 +2955,16 @@
         "kind": 6,
         "importPath": "bot.core.config",
         "description": "bot.core.config",
-        "peekOfCode": "class BotSettings(WebhookSettings):\n    BOT_TOKEN: str\n    SUPPORT_URL: str | None = None\n    RATE_LIMIT: int | float = 0.5  # for throttling control\nclass DBSettings(EnvBaseSettings):\n    DB_HOST: str = \"postgres\"\n    DB_PORT: int = 5432\n    DB_USER: str = \"postgres\"\n    DB_PASS: str | None = None\n    DB_NAME: str = \"postgres\"",
+        "peekOfCode": "class BotSettings(WebhookSettings):\n    BOT_TOKEN: str\n    SUPPORT_URL: str | None = None\n    RATE_LIMIT: int | float = 0.5  # for throttling control\nclass DeepSeekSettings(EnvBaseSettings):\n    DEEPSEEK_TOKEN: str\n    DEEPSEEK_URL: str\nclass DBSettings(EnvBaseSettings):\n    DB_HOST: str = \"postgres\"\n    DB_PORT: int = 5432",
+        "detail": "bot.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "DeepSeekSettings",
+        "kind": 6,
+        "importPath": "bot.core.config",
+        "description": "bot.core.config",
+        "peekOfCode": "class DeepSeekSettings(EnvBaseSettings):\n    DEEPSEEK_TOKEN: str\n    DEEPSEEK_URL: str\nclass DBSettings(EnvBaseSettings):\n    DB_HOST: str = \"postgres\"\n    DB_PORT: int = 5432\n    DB_USER: str = \"postgres\"\n    DB_PASS: str | None = None\n    DB_NAME: str = \"postgres\"\n    @property",
         "detail": "bot.core.config",
         "documentation": {}
     },
@@ -2909,7 +2991,7 @@
         "kind": 6,
         "importPath": "bot.core.config",
         "description": "bot.core.config",
-        "peekOfCode": "class Settings(BotSettings, DBSettings, CacheSettings):\n    DEBUG: bool = False\n    SENTRY_DSN: str | None = None\n    AMPLITUDE_API_KEY: str  # or for example it could be POSTHOG_API_KEY\nsettings = Settings()",
+        "peekOfCode": "class Settings(BotSettings, DBSettings, CacheSettings, DeepSeekSettings):\n    DEBUG: bool = False\n    SENTRY_DSN: str | None = None\n    AMPLITUDE_API_KEY: str  # or for example it could be POSTHOG_API_KEY\nsettings = Settings()",
         "detail": "bot.core.config",
         "documentation": {}
     },
@@ -2918,7 +3000,7 @@
         "kind": 5,
         "importPath": "bot.core.config",
         "description": "bot.core.config",
-        "peekOfCode": "DIR = Path(__file__).absolute().parent.parent.parent\nBOT_DIR = Path(__file__).absolute().parent.parent\nLOCALES_DIR = f\"{BOT_DIR}/locales\"\nI18N_DOMAIN = \"messages\"\nDEFAULT_LOCALE = \"en\"\nclass EnvBaseSettings(BaseSettings):\n    model_config = SettingsConfigDict(env_file=\".env\", env_file_encoding=\"utf-8\", extra=\"ignore\")\nclass WebhookSettings(EnvBaseSettings):\n    USE_WEBHOOK: bool = False\n    WEBHOOK_BASE_URL: str = \"https://xxx.ngrok-free.app\"",
+        "peekOfCode": "DIR = Path(__file__).absolute().parent.parent.parent\nBOT_DIR = Path(__file__).absolute().parent.parent\nLOCALES_DIR = f\"{BOT_DIR}/locales\"\nI18N_DOMAIN = \"messages\"\nDEFAULT_LOCALE = \"en\"\nclass EnvBaseSettings(BaseSettings):\n    model_config = SettingsConfigDict(\n        env_file=\".env\", env_file_encoding=\"utf-8\", extra=\"ignore\")\nclass WebhookSettings(EnvBaseSettings):\n    USE_WEBHOOK: bool = False",
         "detail": "bot.core.config",
         "documentation": {}
     },
@@ -2927,7 +3009,7 @@
         "kind": 5,
         "importPath": "bot.core.config",
         "description": "bot.core.config",
-        "peekOfCode": "BOT_DIR = Path(__file__).absolute().parent.parent\nLOCALES_DIR = f\"{BOT_DIR}/locales\"\nI18N_DOMAIN = \"messages\"\nDEFAULT_LOCALE = \"en\"\nclass EnvBaseSettings(BaseSettings):\n    model_config = SettingsConfigDict(env_file=\".env\", env_file_encoding=\"utf-8\", extra=\"ignore\")\nclass WebhookSettings(EnvBaseSettings):\n    USE_WEBHOOK: bool = False\n    WEBHOOK_BASE_URL: str = \"https://xxx.ngrok-free.app\"\n    WEBHOOK_PATH: str = \"/webhook\"",
+        "peekOfCode": "BOT_DIR = Path(__file__).absolute().parent.parent\nLOCALES_DIR = f\"{BOT_DIR}/locales\"\nI18N_DOMAIN = \"messages\"\nDEFAULT_LOCALE = \"en\"\nclass EnvBaseSettings(BaseSettings):\n    model_config = SettingsConfigDict(\n        env_file=\".env\", env_file_encoding=\"utf-8\", extra=\"ignore\")\nclass WebhookSettings(EnvBaseSettings):\n    USE_WEBHOOK: bool = False\n    WEBHOOK_BASE_URL: str = \"https://xxx.ngrok-free.app\"",
         "detail": "bot.core.config",
         "documentation": {}
     },
@@ -2936,7 +3018,7 @@
         "kind": 5,
         "importPath": "bot.core.config",
         "description": "bot.core.config",
-        "peekOfCode": "LOCALES_DIR = f\"{BOT_DIR}/locales\"\nI18N_DOMAIN = \"messages\"\nDEFAULT_LOCALE = \"en\"\nclass EnvBaseSettings(BaseSettings):\n    model_config = SettingsConfigDict(env_file=\".env\", env_file_encoding=\"utf-8\", extra=\"ignore\")\nclass WebhookSettings(EnvBaseSettings):\n    USE_WEBHOOK: bool = False\n    WEBHOOK_BASE_URL: str = \"https://xxx.ngrok-free.app\"\n    WEBHOOK_PATH: str = \"/webhook\"\n    WEBHOOK_SECRET: str = \"\"",
+        "peekOfCode": "LOCALES_DIR = f\"{BOT_DIR}/locales\"\nI18N_DOMAIN = \"messages\"\nDEFAULT_LOCALE = \"en\"\nclass EnvBaseSettings(BaseSettings):\n    model_config = SettingsConfigDict(\n        env_file=\".env\", env_file_encoding=\"utf-8\", extra=\"ignore\")\nclass WebhookSettings(EnvBaseSettings):\n    USE_WEBHOOK: bool = False\n    WEBHOOK_BASE_URL: str = \"https://xxx.ngrok-free.app\"\n    WEBHOOK_PATH: str = \"/webhook\"",
         "detail": "bot.core.config",
         "documentation": {}
     },
@@ -2945,7 +3027,7 @@
         "kind": 5,
         "importPath": "bot.core.config",
         "description": "bot.core.config",
-        "peekOfCode": "I18N_DOMAIN = \"messages\"\nDEFAULT_LOCALE = \"en\"\nclass EnvBaseSettings(BaseSettings):\n    model_config = SettingsConfigDict(env_file=\".env\", env_file_encoding=\"utf-8\", extra=\"ignore\")\nclass WebhookSettings(EnvBaseSettings):\n    USE_WEBHOOK: bool = False\n    WEBHOOK_BASE_URL: str = \"https://xxx.ngrok-free.app\"\n    WEBHOOK_PATH: str = \"/webhook\"\n    WEBHOOK_SECRET: str = \"\"\n    WEBHOOK_HOST: str = \"localhost\"",
+        "peekOfCode": "I18N_DOMAIN = \"messages\"\nDEFAULT_LOCALE = \"en\"\nclass EnvBaseSettings(BaseSettings):\n    model_config = SettingsConfigDict(\n        env_file=\".env\", env_file_encoding=\"utf-8\", extra=\"ignore\")\nclass WebhookSettings(EnvBaseSettings):\n    USE_WEBHOOK: bool = False\n    WEBHOOK_BASE_URL: str = \"https://xxx.ngrok-free.app\"\n    WEBHOOK_PATH: str = \"/webhook\"\n    WEBHOOK_SECRET: str = \"\"",
         "detail": "bot.core.config",
         "documentation": {}
     },
@@ -2954,7 +3036,7 @@
         "kind": 5,
         "importPath": "bot.core.config",
         "description": "bot.core.config",
-        "peekOfCode": "DEFAULT_LOCALE = \"en\"\nclass EnvBaseSettings(BaseSettings):\n    model_config = SettingsConfigDict(env_file=\".env\", env_file_encoding=\"utf-8\", extra=\"ignore\")\nclass WebhookSettings(EnvBaseSettings):\n    USE_WEBHOOK: bool = False\n    WEBHOOK_BASE_URL: str = \"https://xxx.ngrok-free.app\"\n    WEBHOOK_PATH: str = \"/webhook\"\n    WEBHOOK_SECRET: str = \"\"\n    WEBHOOK_HOST: str = \"localhost\"\n    WEBHOOK_PORT: int = 8080",
+        "peekOfCode": "DEFAULT_LOCALE = \"en\"\nclass EnvBaseSettings(BaseSettings):\n    model_config = SettingsConfigDict(\n        env_file=\".env\", env_file_encoding=\"utf-8\", extra=\"ignore\")\nclass WebhookSettings(EnvBaseSettings):\n    USE_WEBHOOK: bool = False\n    WEBHOOK_BASE_URL: str = \"https://xxx.ngrok-free.app\"\n    WEBHOOK_PATH: str = \"/webhook\"\n    WEBHOOK_SECRET: str = \"\"\n    WEBHOOK_HOST: str = \"localhost\"",
         "detail": "bot.core.config",
         "documentation": {}
     },
@@ -3098,7 +3180,7 @@
         "kind": 2,
         "importPath": "bot.database.database",
         "description": "bot.database.database",
-        "peekOfCode": "def get_sessionmaker(engine: AsyncEngine) -> async_sessionmaker[AsyncSession]:\n    return async_sessionmaker(bind=engine, autoflush=False, expire_on_commit=False)\ndb_url = settings.database_url\nengine = get_engine(url=db_url)\nsessionmaker = get_sessionmaker(engine)",
+        "peekOfCode": "def get_sessionmaker(engine: AsyncEngine) -> async_sessionmaker[AsyncSession]:\n    return async_sessionmaker(bind=engine, autoflush=False, expire_on_commit=False,)\ndb_url = settings.database_url\nengine = get_engine(url=db_url)\nsessionmaker = get_sessionmaker(engine)",
         "detail": "bot.database.database",
         "documentation": {}
     },
@@ -3148,6 +3230,24 @@
         "documentation": {}
     },
     {
+        "label": "DeepSeekStates",
+        "kind": 6,
+        "importPath": "bot.handlers.deepseek_message",
+        "description": "bot.handlers.deepseek_message",
+        "peekOfCode": "class DeepSeekStates(StatesGroup):\n    waiting_for_question = State()\n    processing = State()\n@router.message(DeepSeekStates.waiting_for_question)\nasync def process_deepseek_question(message: Message, state: FSMContext):\n    user_text = message.text\n    await message.answer(\"⏳ Думаю...\")\n    await state.set_state(DeepSeekStates.processing)\n    try:\n        reply = ask_deepseek(user_text)",
+        "detail": "bot.handlers.deepseek_message",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "bot.handlers.deepseek_message",
+        "description": "bot.handlers.deepseek_message",
+        "peekOfCode": "router = Router()\nclass DeepSeekStates(StatesGroup):\n    waiting_for_question = State()\n    processing = State()\n@router.message(DeepSeekStates.waiting_for_question)\nasync def process_deepseek_question(message: Message, state: FSMContext):\n    user_text = message.text\n    await message.answer(\"⏳ Думаю...\")\n    await state.set_state(DeepSeekStates.processing)\n    try:",
+        "detail": "bot.handlers.deepseek_message",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "kind": 5,
         "importPath": "bot.handlers.export_users",
@@ -3179,7 +3279,7 @@
         "kind": 5,
         "importPath": "bot.handlers.menu_callbacks",
         "description": "bot.handlers.menu_callbacks",
-        "peekOfCode": "router = Router(name=\"menu_callbacks\")\n@router.callback_query(lambda c: c.data == \"chatgpt\")\nasync def chatgpt_callback(callback: CallbackQuery):\n    await callback.message.answer(_(\"Enter your question\"), reply_markup=back_button_keyboard())\n    await callback.answer()\n@router.callback_query(lambda c: c.data == \"text_insert\")\nasync def text_insert_callback(callback: CallbackQuery):\n    await callback.message.answer(_(\"Enter your text\"), reply_markup=back_button_keyboard())\n    await callback.answer()\n@router.callback_query(lambda c: c.data == \"settings\")",
+        "peekOfCode": "router = Router(name=\"menu_callbacks\")\n@router.callback_query(lambda c: c.data == \"chatgpt\")\nasync def chatgpt_callback(callback: CallbackQuery, state: FSMContext):\n    await callback.message.answer(_(\"Enter your question\"), reply_markup=back_button_keyboard())\n    await state.set_state(DeepSeekStates.waiting_for_question)\n    await callback.answer()\n@router.callback_query(lambda c: c.data == \"text_insert\")\nasync def text_insert_callback(callback: CallbackQuery):\n    await callback.message.answer(_(\"Enter your text\"), reply_markup=back_button_keyboard())\n    await callback.answer()",
         "detail": "bot.handlers.menu_callbacks",
         "documentation": {}
     },
@@ -3352,6 +3452,33 @@
         "description": "bot.services.analytics",
         "peekOfCode": "analytics = AnalyticsService(logger)",
         "detail": "bot.services.analytics",
+        "documentation": {}
+    },
+    {
+        "label": "ask_deepseek",
+        "kind": 2,
+        "importPath": "bot.services.deepseek_client",
+        "description": "bot.services.deepseek_client",
+        "peekOfCode": "def ask_deepseek(message: str) -> str:\n    headers = {\n        \"Authorization\": f\"Bearer {API_KEY}\",\n        \"Content-Type\": \"application/json\",\n    }\n    payload = {\n        \"model\": \"deepseek-chat\",\n        \"messages\": [{\"role\": \"user\", \"content\": message}],\n    }\n    response = requests.post(API_URL, headers=headers, json=payload)",
+        "detail": "bot.services.deepseek_client",
+        "documentation": {}
+    },
+    {
+        "label": "API_URL",
+        "kind": 5,
+        "importPath": "bot.services.deepseek_client",
+        "description": "bot.services.deepseek_client",
+        "peekOfCode": "API_URL = settings.DEEPSEEK_URL\nAPI_KEY = settings.DEEPSEEK_TOKEN\ndef ask_deepseek(message: str) -> str:\n    headers = {\n        \"Authorization\": f\"Bearer {API_KEY}\",\n        \"Content-Type\": \"application/json\",\n    }\n    payload = {\n        \"model\": \"deepseek-chat\",\n        \"messages\": [{\"role\": \"user\", \"content\": message}],",
+        "detail": "bot.services.deepseek_client",
+        "documentation": {}
+    },
+    {
+        "label": "API_KEY",
+        "kind": 5,
+        "importPath": "bot.services.deepseek_client",
+        "description": "bot.services.deepseek_client",
+        "peekOfCode": "API_KEY = settings.DEEPSEEK_TOKEN\ndef ask_deepseek(message: str) -> str:\n    headers = {\n        \"Authorization\": f\"Bearer {API_KEY}\",\n        \"Content-Type\": \"application/json\",\n    }\n    payload = {\n        \"model\": \"deepseek-chat\",\n        \"messages\": [{\"role\": \"user\", \"content\": message}],\n    }",
+        "detail": "bot.services.deepseek_client",
         "documentation": {}
     },
     {

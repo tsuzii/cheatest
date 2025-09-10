@@ -28,7 +28,7 @@ def get_engine(url: URL | str = settings.database_url) -> AsyncEngine:
 
 
 def get_sessionmaker(engine: AsyncEngine) -> async_sessionmaker[AsyncSession]:
-    return async_sessionmaker(bind=engine, autoflush=False, expire_on_commit=False)
+    return async_sessionmaker(bind=engine, autoflush=False, expire_on_commit=False,)
 
 
 db_url = settings.database_url

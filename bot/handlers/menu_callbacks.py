@@ -1,8 +1,9 @@
 from aiogram import Router, types
+from aiogram.fsm.context import FSMContext
 from aiogram.types import CallbackQuery
 from aiogram.utils.i18n import gettext as _
 
-from bot.core.config import settings
+from .deepseek_message import DeepSeekStates
 from bot.keyboards.inline.settings import settings_keyboard
 from bot.keyboards.inline.menu import main_keyboard
 from bot.keyboards.inline.contacts import back_button_keyboard
@@ -11,8 +12,9 @@ router = Router(name="menu_callbacks")
 
 
 @router.callback_query(lambda c: c.data == "chatgpt")
-async def chatgpt_callback(callback: CallbackQuery):
+async def chatgpt_callback(callback: CallbackQuery, state: FSMContext):
     await callback.message.answer(_("Enter your question"), reply_markup=back_button_keyboard())
+    await state.set_state(DeepSeekStates.waiting_for_question)
     await callback.answer()
 
 
@@ -34,6 +36,7 @@ async def text_output_callback(callback: CallbackQuery):
 
 
 @router.callback_query(lambda c: c.data == "menu")
-async def menu_callback(callback: CallbackQuery):
+async def menu_callback(callback: CallbackQuery, state: FSMContext):
+    await state.clear()
     await callback.message.answer(_("title main keyboard"), reply_markup=main_keyboard())
     await callback.answer()

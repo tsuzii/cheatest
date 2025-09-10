@@ -15,7 +15,8 @@ DEFAULT_LOCALE = "en"
 
 
 class EnvBaseSettings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
+    model_config = SettingsConfigDict(
+        env_file=".env", env_file_encoding="utf-8", extra="ignore")
 
 
 class WebhookSettings(EnvBaseSettings):
@@ -37,6 +38,11 @@ class BotSettings(WebhookSettings):
     BOT_TOKEN: str
     SUPPORT_URL: str | None = None
     RATE_LIMIT: int | float = 0.5  # for throttling control
+
+
+class DeepSeekSettings(EnvBaseSettings):
+    DEEPSEEK_TOKEN: str
+    DEEPSEEK_URL: str
 
 
 class DBSettings(EnvBaseSettings):
@@ -76,7 +82,7 @@ class CacheSettings(EnvBaseSettings):
         return f"redis://{self.REDIS_HOST}:{self.REDIS_PORT}/0"
 
 
-class Settings(BotSettings, DBSettings, CacheSettings):
+class Settings(BotSettings, DBSettings, CacheSettings, DeepSeekSettings):
     DEBUG: bool = False
 
     SENTRY_DSN: str | None = None
