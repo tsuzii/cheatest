@@ -1,8 +1,8 @@
 from aiogram import Router
 
-from bot.handlers import deepseek_message, menu_callbacks
+from bot.handlers import menu_callbacks
 
-from . import export_users, info, menu, start, support
+from . import export_users, info, menu, start, support, settings, deepseek_message
 
 
 def get_handlers_router() -> Router:
@@ -14,5 +14,6 @@ def get_handlers_router() -> Router:
     router.include_router(menu_callbacks.router)
     router.include_router(export_users.router)
     router.include_router(deepseek_message.router)
+    router.include_router(settings.router)
 
     return router

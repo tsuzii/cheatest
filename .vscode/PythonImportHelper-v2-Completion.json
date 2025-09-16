@@ -1288,6 +1288,22 @@
         "documentation": {}
     },
     {
+        "label": "F",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "Router",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
         "label": "types",
         "importPath": "aiogram",
         "description": "aiogram",
@@ -1720,6 +1736,14 @@
         "documentation": {}
     },
     {
+        "label": "CallbackQuery",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
         "label": "InlineKeyboardButton",
         "importPath": "aiogram.types",
         "description": "aiogram.types",
@@ -1920,11 +1944,27 @@
         "documentation": {}
     },
     {
+        "label": "back_button_keyboard",
+        "importPath": "bot.keyboards.inline.contacts",
+        "description": "bot.keyboards.inline.contacts",
+        "isExtraImport": true,
+        "detail": "bot.keyboards.inline.contacts",
+        "documentation": {}
+    },
+    {
         "label": "contacts_keyboard",
         "importPath": "bot.keyboards.inline.contacts",
         "description": "bot.keyboards.inline.contacts",
         "isExtraImport": true,
         "detail": "bot.keyboards.inline.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "gettext",
+        "importPath": "aiogram.utils.i18n",
+        "description": "aiogram.utils.i18n",
+        "isExtraImport": true,
+        "detail": "aiogram.utils.i18n",
         "documentation": {}
     },
     {
@@ -3234,7 +3274,7 @@
         "kind": 6,
         "importPath": "bot.handlers.deepseek_message",
         "description": "bot.handlers.deepseek_message",
-        "peekOfCode": "class DeepSeekStates(StatesGroup):\n    waiting_for_question = State()\n    processing = State()\n@router.message(DeepSeekStates.waiting_for_question)\nasync def process_deepseek_question(message: Message, state: FSMContext):\n    user_text = message.text\n    await message.answer(\"⏳ Думаю...\")\n    await state.set_state(DeepSeekStates.processing)\n    try:\n        reply = ask_deepseek(user_text)",
+        "peekOfCode": "class DeepSeekStates(StatesGroup):\n    waiting_for_question = State()\n    processing = State()\n@router.message(DeepSeekStates.waiting_for_question)\nasync def process_deepseek_question(message: Message, state: FSMContext):\n    user_text = message.text\n    await message.answer(\"⏳ Think...\")\n    await state.set_state(DeepSeekStates.processing)\n    try:\n        reply = ask_deepseek(user_text)",
         "detail": "bot.handlers.deepseek_message",
         "documentation": {}
     },
@@ -3243,7 +3283,7 @@
         "kind": 5,
         "importPath": "bot.handlers.deepseek_message",
         "description": "bot.handlers.deepseek_message",
-        "peekOfCode": "router = Router()\nclass DeepSeekStates(StatesGroup):\n    waiting_for_question = State()\n    processing = State()\n@router.message(DeepSeekStates.waiting_for_question)\nasync def process_deepseek_question(message: Message, state: FSMContext):\n    user_text = message.text\n    await message.answer(\"⏳ Думаю...\")\n    await state.set_state(DeepSeekStates.processing)\n    try:",
+        "peekOfCode": "router = Router()\nclass DeepSeekStates(StatesGroup):\n    waiting_for_question = State()\n    processing = State()\n@router.message(DeepSeekStates.waiting_for_question)\nasync def process_deepseek_question(message: Message, state: FSMContext):\n    user_text = message.text\n    await message.answer(\"⏳ Think...\")\n    await state.set_state(DeepSeekStates.processing)\n    try:",
         "detail": "bot.handlers.deepseek_message",
         "documentation": {}
     },
@@ -3290,6 +3330,15 @@
         "description": "bot.handlers.metrics",
         "peekOfCode": "class MetricsView(web.View):\n    def __init__(\n        self,\n        request: Request,\n        registry: prometheus_client.CollectorRegistry = prometheus_client.REGISTRY,\n    ) -> None:\n        self._request = request\n        self.registry = registry\n    async def get(self) -> Response:\n        response = Response(body=prometheus_client.generate_latest(self.registry))",
         "detail": "bot.handlers.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "bot.handlers.settings",
+        "description": "bot.handlers.settings",
+        "peekOfCode": "router = Router()\n@router.callback_query(F.data == \"word_count\")\nasync def handle_word_count(callback: CallbackQuery):\n    await callback.message.answer(_(\"You pressed word count button\"), reply_markup=back_button_keyboard())\n    await callback.answer()\n@router.callback_query(F.data == \"schedule\")\nasync def handle_schedule(callback: CallbackQuery):\n    await callback.message.answer(_(\"You pressed schedule button\"), reply_markup=back_button_keyboard())\n    await callback.answer()\n@router.callback_query(F.data == \"menu\")",
+        "detail": "bot.handlers.settings",
         "documentation": {}
     },
     {
