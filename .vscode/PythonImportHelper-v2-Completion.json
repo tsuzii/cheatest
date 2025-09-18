@@ -1640,6 +1640,14 @@
         "documentation": {}
     },
     {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
         "label": "async_engine_from_config",
         "importPath": "sqlalchemy.ext.asyncio",
         "description": "sqlalchemy.ext.asyncio",
@@ -1737,6 +1745,14 @@
     },
     {
         "label": "CallbackQuery",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
         "importPath": "aiogram.types",
         "description": "aiogram.types",
         "isExtraImport": true,
@@ -1857,6 +1873,38 @@
     },
     {
         "label": "get_user_count",
+        "importPath": "bot.services.users",
+        "description": "bot.services.users",
+        "isExtraImport": true,
+        "detail": "bot.services.users",
+        "documentation": {}
+    },
+    {
+        "label": "get_word_count",
+        "importPath": "bot.services.users",
+        "description": "bot.services.users",
+        "isExtraImport": true,
+        "detail": "bot.services.users",
+        "documentation": {}
+    },
+    {
+        "label": "set_word_count",
+        "importPath": "bot.services.users",
+        "description": "bot.services.users",
+        "isExtraImport": true,
+        "detail": "bot.services.users",
+        "documentation": {}
+    },
+    {
+        "label": "get_schedule",
+        "importPath": "bot.services.users",
+        "description": "bot.services.users",
+        "isExtraImport": true,
+        "detail": "bot.services.users",
+        "documentation": {}
+    },
+    {
+        "label": "set_schedule",
         "importPath": "bot.services.users",
         "description": "bot.services.users",
         "isExtraImport": true,
@@ -2113,35 +2161,43 @@
         "documentation": {}
     },
     {
+        "label": "InlineKeyboardBuilder",
+        "importPath": "aiogram.utils.keyboard",
+        "description": "aiogram.utils.keyboard",
+        "isExtraImport": true,
+        "detail": "aiogram.utils.keyboard",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardBuilder",
+        "importPath": "aiogram.utils.keyboard",
+        "description": "aiogram.utils.keyboard",
+        "isExtraImport": true,
+        "detail": "aiogram.utils.keyboard",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardBuilder",
+        "importPath": "aiogram.utils.keyboard",
+        "description": "aiogram.utils.keyboard",
+        "isExtraImport": true,
+        "detail": "aiogram.utils.keyboard",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardBuilder",
+        "importPath": "aiogram.utils.keyboard",
+        "description": "aiogram.utils.keyboard",
+        "isExtraImport": true,
+        "detail": "aiogram.utils.keyboard",
+        "documentation": {}
+    },
+    {
         "label": "analytics",
         "importPath": "bot.services.analytics",
         "description": "bot.services.analytics",
         "isExtraImport": true,
         "detail": "bot.services.analytics",
-        "documentation": {}
-    },
-    {
-        "label": "InlineKeyboardBuilder",
-        "importPath": "aiogram.utils.keyboard",
-        "description": "aiogram.utils.keyboard",
-        "isExtraImport": true,
-        "detail": "aiogram.utils.keyboard",
-        "documentation": {}
-    },
-    {
-        "label": "InlineKeyboardBuilder",
-        "importPath": "aiogram.utils.keyboard",
-        "description": "aiogram.utils.keyboard",
-        "isExtraImport": true,
-        "detail": "aiogram.utils.keyboard",
-        "documentation": {}
-    },
-    {
-        "label": "InlineKeyboardBuilder",
-        "importPath": "aiogram.utils.keyboard",
-        "description": "aiogram.utils.keyboard",
-        "isExtraImport": true,
-        "detail": "aiogram.utils.keyboard",
         "documentation": {}
     },
     {
@@ -3333,11 +3389,20 @@
         "documentation": {}
     },
     {
+        "label": "word_count_keyboard",
+        "kind": 2,
+        "importPath": "bot.handlers.settings",
+        "description": "bot.handlers.settings",
+        "peekOfCode": "def word_count_keyboard():\n    kb = InlineKeyboardBuilder()\n    for val in [2, 4, 6, 8]:\n        kb.button(text=str(val), callback_data=f\"set_word_count:{val}\")\n    kb.button(text=\"⬅️ Назад\", callback_data=\"menu\")\n    return kb.as_markup()\n@router.callback_query(F.data == \"word_count\")\nasync def handle_word_count(callback: CallbackQuery, session: AsyncSession):\n    current = await get_word_count(session, callback.from_user.id)\n    await callback.message.answer(",
+        "detail": "bot.handlers.settings",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "kind": 5,
         "importPath": "bot.handlers.settings",
         "description": "bot.handlers.settings",
-        "peekOfCode": "router = Router()\n@router.callback_query(F.data == \"word_count\")\nasync def handle_word_count(callback: CallbackQuery):\n    await callback.message.answer(_(\"You pressed word count button\"), reply_markup=back_button_keyboard())\n    await callback.answer()\n@router.callback_query(F.data == \"schedule\")\nasync def handle_schedule(callback: CallbackQuery):\n    await callback.message.answer(_(\"You pressed schedule button\"), reply_markup=back_button_keyboard())\n    await callback.answer()\n@router.callback_query(F.data == \"menu\")",
+        "peekOfCode": "router = Router()\ndef word_count_keyboard():\n    kb = InlineKeyboardBuilder()\n    for val in [2, 4, 6, 8]:\n        kb.button(text=str(val), callback_data=f\"set_word_count:{val}\")\n    kb.button(text=\"⬅️ Назад\", callback_data=\"menu\")\n    return kb.as_markup()\n@router.callback_query(F.data == \"word_count\")\nasync def handle_word_count(callback: CallbackQuery, session: AsyncSession):\n    current = await get_word_count(session, callback.from_user.id)",
         "detail": "bot.handlers.settings",
         "documentation": {}
     },

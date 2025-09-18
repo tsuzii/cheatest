@@ -20,3 +20,6 @@ class UserModel(Base):
     is_suspicious: Mapped[bool] = mapped_column(default=False)
     is_block: Mapped[bool] = mapped_column(default=False)
     is_premium: Mapped[bool] = mapped_column(default=False)
+
+    word_count: Mapped[int] = mapped_column(default=5)
+    schedule: Mapped[int] = mapped_column(default=5)

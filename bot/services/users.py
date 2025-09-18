@@ -75,7 +75,8 @@ async def set_language_code(
     user_id: int,
     language_code: str,
 ) -> None:
-    stmt = update(UserModel).where(UserModel.id == user_id).values(language_code=language_code)
+    stmt = update(UserModel).where(UserModel.id == user_id).values(
+        language_code=language_code)
 
     await session.execute(stmt)
     await session.commit()
@@ -92,7 +93,8 @@ async def is_admin(session: AsyncSession, user_id: int) -> bool:
 
 
 async def set_is_admin(session: AsyncSession, user_id: int, is_admin: bool) -> None:
-    stmt = update(UserModel).where(UserModel.id == user_id).values(is_admin=is_admin)
+    stmt = update(UserModel).where(UserModel.id ==
+                                   user_id).values(is_admin=is_admin)
 
     await session.execute(stmt)
     await session.commit()
@@ -116,3 +118,31 @@ async def get_user_count(session: AsyncSession) -> int:
 
     count = result.scalar_one_or_none() or 0
     return int(count)
+
+
+async def get_word_count(session: AsyncSession, user_id: int) -> int:
+    query = select(UserModel.word_count).filter_by(id=user_id)
+    result = await session.execute(query)
+    word_count = result.scalar_one_or_none()
+    return word_count or 5  # дефолт
+
+
+async def set_word_count(session: AsyncSession, user_id: int, value: int) -> None:
+    stmt = update(UserModel).where(UserModel.id ==
+                                   user_id).values(word_count=value)
+    await session.execute(stmt)
+    await session.commit()
+
+
+async def get_schedule(session: AsyncSession, user_id: int) -> int:
+    query = select(UserModel.schedule).filter_by(id=user_id)
+    result = await session.execute(query)
+    schedule = result.scalar_one_or_none()
+    return schedule or 30
+
+
+async def set_schedule(session: AsyncSession, user_id: int, value: int) -> None:
+    stmt = update(UserModel).where(
+        UserModel.id == user_id).values(schedule=value)
+    await session.execute(stmt)
+    await session.commit()
