@@ -1,7 +1,4 @@
-from __future__ import annotations
-
-from sqlalchemy.orm import Mapped, mapped_column
-
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 from bot.database.models.base import Base, big_int_pk, created_at
 
 
@@ -23,3 +20,6 @@ class UserModel(Base):
 
     word_count: Mapped[int] = mapped_column(default=5)
     schedule: Mapped[int] = mapped_column(default=5)
+
+    text_inserts = relationship(
+        "TextInsertModel", back_populates="user", cascade="all, delete-orphan")

@@ -3,6 +3,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.types import CallbackQuery
 from aiogram.utils.i18n import gettext as _
 
+from .text_inserts import InsertTextState
 from .deepseek_message import DeepSeekStates
 from bot.keyboards.inline.settings import settings_keyboard
 from bot.keyboards.inline.menu import main_keyboard
@@ -19,8 +20,9 @@ async def chatgpt_callback(callback: CallbackQuery, state: FSMContext):
 
 
 @router.callback_query(lambda c: c.data == "text_insert")
-async def text_insert_callback(callback: CallbackQuery):
+async def text_insert_callback(callback: CallbackQuery, state: FSMContext):
     await callback.message.answer(_("Enter your text"), reply_markup=back_button_keyboard())
+    await state.set_state(InsertTextState.waiting_for_text)
     await callback.answer()
 
 

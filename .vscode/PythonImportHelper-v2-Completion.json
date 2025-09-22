@@ -201,14 +201,6 @@
         "documentation": {}
     },
     {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -589,6 +581,38 @@
         "documentation": {}
     },
     {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Flask",
         "importPath": "flask",
         "description": "flask",
@@ -767,6 +791,38 @@
     },
     {
         "label": "text",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "BigInteger",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -1328,6 +1384,14 @@
         "documentation": {}
     },
     {
+        "label": "Router",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
         "label": "BaseMiddleware",
         "importPath": "aiogram",
         "description": "aiogram",
@@ -1560,6 +1624,38 @@
         "documentation": {}
     },
     {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Mapped",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "mapped_column",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
         "label": "Base",
         "importPath": "bot.database.models.base",
         "description": "bot.database.models.base",
@@ -1625,6 +1721,14 @@
     },
     {
         "label": "create_async_engine",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
         "importPath": "sqlalchemy.ext.asyncio",
         "description": "sqlalchemy.ext.asyncio",
         "isExtraImport": true,
@@ -1745,6 +1849,14 @@
     },
     {
         "label": "CallbackQuery",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
         "importPath": "aiogram.types",
         "description": "aiogram.types",
         "isExtraImport": true,
@@ -1952,6 +2064,14 @@
         "documentation": {}
     },
     {
+        "label": "FSMContext",
+        "importPath": "aiogram.fsm.context",
+        "description": "aiogram.fsm.context",
+        "isExtraImport": true,
+        "detail": "aiogram.fsm.context",
+        "documentation": {}
+    },
+    {
         "label": "State",
         "importPath": "aiogram.fsm.state",
         "description": "aiogram.fsm.state",
@@ -1961,6 +2081,22 @@
     },
     {
         "label": "StatesGroup",
+        "importPath": "aiogram.fsm.state",
+        "description": "aiogram.fsm.state",
+        "isExtraImport": true,
+        "detail": "aiogram.fsm.state",
+        "documentation": {}
+    },
+    {
+        "label": "StatesGroup",
+        "importPath": "aiogram.fsm.state",
+        "description": "aiogram.fsm.state",
+        "isExtraImport": true,
+        "detail": "aiogram.fsm.state",
+        "documentation": {}
+    },
+    {
+        "label": "State",
         "importPath": "aiogram.fsm.state",
         "description": "aiogram.fsm.state",
         "isExtraImport": true,
@@ -2201,6 +2337,14 @@
         "documentation": {}
     },
     {
+        "label": "TextInsertModel",
+        "importPath": "bot.database.models.text_insert",
+        "description": "bot.database.models.text_insert",
+        "isExtraImport": true,
+        "detail": "bot.database.models.text_insert",
+        "documentation": {}
+    },
+    {
         "label": "find_command_argument",
         "importPath": "bot.utils.command",
         "description": "bot.utils.command",
@@ -2338,6 +2482,22 @@
         "importPath": "io",
         "description": "io",
         "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
         "documentation": {}
     },
     {
@@ -3222,7 +3382,7 @@
         "kind": 5,
         "importPath": "bot.database.models.base",
         "description": "bot.database.models.base",
-        "peekOfCode": "int_pk = Annotated[int, mapped_column(primary_key=True, unique=True, autoincrement=False)]\nbig_int_pk = Annotated[int, mapped_column(primary_key=True, unique=True, autoincrement=False, type_=BigInteger)]\ncreated_at = Annotated[datetime.datetime, mapped_column(server_default=text(\"TIMEZONE('utc', now())\"))]\nclass Base(DeclarativeBase):\n    repr_cols_num = 3  # print first columns\n    repr_cols: tuple[str, ...] = ()  # extra printed columns\n    def __repr__(self) -> str:\n        cols = [\n            f\"{col}={getattr(self, col)}\"\n            for idx, col in enumerate(self.__table__.columns.keys())",
+        "peekOfCode": "int_pk = Annotated[int, mapped_column(\n    primary_key=True, unique=True, autoincrement=False)]\nbig_int_pk = Annotated[int, mapped_column(\n    primary_key=True, unique=True, autoincrement=False, type_=BigInteger)]\ncreated_at = Annotated[datetime.datetime, mapped_column(\n    server_default=text(\"TIMEZONE('utc', now())\"))]\nclass Base(DeclarativeBase):\n    repr_cols_num = 3  # print first columns\n    repr_cols: tuple[str, ...] = ()  # extra printed columns\n    def __repr__(self) -> str:",
         "detail": "bot.database.models.base",
         "documentation": {}
     },
@@ -3231,7 +3391,7 @@
         "kind": 5,
         "importPath": "bot.database.models.base",
         "description": "bot.database.models.base",
-        "peekOfCode": "big_int_pk = Annotated[int, mapped_column(primary_key=True, unique=True, autoincrement=False, type_=BigInteger)]\ncreated_at = Annotated[datetime.datetime, mapped_column(server_default=text(\"TIMEZONE('utc', now())\"))]\nclass Base(DeclarativeBase):\n    repr_cols_num = 3  # print first columns\n    repr_cols: tuple[str, ...] = ()  # extra printed columns\n    def __repr__(self) -> str:\n        cols = [\n            f\"{col}={getattr(self, col)}\"\n            for idx, col in enumerate(self.__table__.columns.keys())\n            if col in self.repr_cols or idx < self.repr_cols_num",
+        "peekOfCode": "big_int_pk = Annotated[int, mapped_column(\n    primary_key=True, unique=True, autoincrement=False, type_=BigInteger)]\ncreated_at = Annotated[datetime.datetime, mapped_column(\n    server_default=text(\"TIMEZONE('utc', now())\"))]\nclass Base(DeclarativeBase):\n    repr_cols_num = 3  # print first columns\n    repr_cols: tuple[str, ...] = ()  # extra printed columns\n    def __repr__(self) -> str:\n        cols = [\n            f\"{col}={getattr(self, col)}\"",
         "detail": "bot.database.models.base",
         "documentation": {}
     },
@@ -3240,8 +3400,17 @@
         "kind": 5,
         "importPath": "bot.database.models.base",
         "description": "bot.database.models.base",
-        "peekOfCode": "created_at = Annotated[datetime.datetime, mapped_column(server_default=text(\"TIMEZONE('utc', now())\"))]\nclass Base(DeclarativeBase):\n    repr_cols_num = 3  # print first columns\n    repr_cols: tuple[str, ...] = ()  # extra printed columns\n    def __repr__(self) -> str:\n        cols = [\n            f\"{col}={getattr(self, col)}\"\n            for idx, col in enumerate(self.__table__.columns.keys())\n            if col in self.repr_cols or idx < self.repr_cols_num\n        ]",
+        "peekOfCode": "created_at = Annotated[datetime.datetime, mapped_column(\n    server_default=text(\"TIMEZONE('utc', now())\"))]\nclass Base(DeclarativeBase):\n    repr_cols_num = 3  # print first columns\n    repr_cols: tuple[str, ...] = ()  # extra printed columns\n    def __repr__(self) -> str:\n        cols = [\n            f\"{col}={getattr(self, col)}\"\n            for idx, col in enumerate(self.__table__.columns.keys())\n            if col in self.repr_cols or idx < self.repr_cols_num",
         "detail": "bot.database.models.base",
+        "documentation": {}
+    },
+    {
+        "label": "TextInsertModel",
+        "kind": 6,
+        "importPath": "bot.database.models.text_insert",
+        "description": "bot.database.models.text_insert",
+        "peekOfCode": "class TextInsertModel(Base):\n    __tablename__ = \"text_inserts\"\n    id: Mapped[int] = mapped_column(\n        BigInteger, primary_key=True, autoincrement=True)\n    user_id: Mapped[int] = mapped_column(\n        ForeignKey(\"users.id\"), nullable=False)\n    text: Mapped[str]\n    created_at: Mapped[created_at]\n    user = relationship(\"UserModel\", back_populates=\"text_inserts\")",
+        "detail": "bot.database.models.text_insert",
         "documentation": {}
     },
     {
@@ -3375,7 +3544,7 @@
         "kind": 5,
         "importPath": "bot.handlers.menu_callbacks",
         "description": "bot.handlers.menu_callbacks",
-        "peekOfCode": "router = Router(name=\"menu_callbacks\")\n@router.callback_query(lambda c: c.data == \"chatgpt\")\nasync def chatgpt_callback(callback: CallbackQuery, state: FSMContext):\n    await callback.message.answer(_(\"Enter your question\"), reply_markup=back_button_keyboard())\n    await state.set_state(DeepSeekStates.waiting_for_question)\n    await callback.answer()\n@router.callback_query(lambda c: c.data == \"text_insert\")\nasync def text_insert_callback(callback: CallbackQuery):\n    await callback.message.answer(_(\"Enter your text\"), reply_markup=back_button_keyboard())\n    await callback.answer()",
+        "peekOfCode": "router = Router(name=\"menu_callbacks\")\n@router.callback_query(lambda c: c.data == \"chatgpt\")\nasync def chatgpt_callback(callback: CallbackQuery, state: FSMContext):\n    await callback.message.answer(_(\"Enter your question\"), reply_markup=back_button_keyboard())\n    await state.set_state(DeepSeekStates.waiting_for_question)\n    await callback.answer()\n@router.callback_query(lambda c: c.data == \"text_insert\")\nasync def text_insert_callback(callback: CallbackQuery, state: FSMContext):\n    await callback.message.answer(_(\"Enter your text\"), reply_markup=back_button_keyboard())\n    await state.set_state(InsertTextState.waiting_for_text)",
         "detail": "bot.handlers.menu_callbacks",
         "documentation": {}
     },
@@ -3422,6 +3591,24 @@
         "description": "bot.handlers.support",
         "peekOfCode": "router = Router(name=\"support\")\n@router.message(Command(commands=[\"supports\", \"support\", \"contacts\", \"contact\"]))\nasync def support_handler(message: types.Message) -> None:\n    \"\"\"Return a button with a link to the project.\"\"\"\n    await message.answer(_(\"support text\"), reply_markup=contacts_keyboard())",
         "detail": "bot.handlers.support",
+        "documentation": {}
+    },
+    {
+        "label": "InsertTextState",
+        "kind": 6,
+        "importPath": "bot.handlers.text_inserts",
+        "description": "bot.handlers.text_inserts",
+        "peekOfCode": "class InsertTextState(StatesGroup):\n    waiting_for_text = State()\n@router.message(InsertTextState.waiting_for_text)\nasync def save_text_insert(message: Message, state: FSMContext, session: AsyncSession):\n    user_id = message.from_user.id\n    new_insert = TextInsertModel(user_id=user_id, text=message.text)\n    session.add(new_insert)\n    await session.commit()\n    await session.refresh(new_insert)\n    await message.answer(f\"✅ Text saved (ID: {new_insert.id})\")",
+        "detail": "bot.handlers.text_inserts",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "bot.handlers.text_inserts",
+        "description": "bot.handlers.text_inserts",
+        "peekOfCode": "router = Router()\nclass InsertTextState(StatesGroup):\n    waiting_for_text = State()\n@router.message(InsertTextState.waiting_for_text)\nasync def save_text_insert(message: Message, state: FSMContext, session: AsyncSession):\n    user_id = message.from_user.id\n    new_insert = TextInsertModel(user_id=user_id, text=message.text)\n    session.add(new_insert)\n    await session.commit()\n    await session.refresh(new_insert)",
+        "detail": "bot.handlers.text_inserts",
         "documentation": {}
     },
     {
@@ -3665,6 +3852,42 @@
         "description": "migrations.versions.2024-01-24_user_referrer",
         "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('users', 'referrer')\n    # ### end Alembic commands ###",
         "detail": "migrations.versions.2024-01-24_user_referrer",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.2025-09-22_add_foreign_key_user_id_users_id",
+        "description": "migrations.versions.2025-09-22_add_foreign_key_user_id_users_id",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('text_inserts', sa.Column('text', sa.String(), nullable=False))\n    op.add_column('text_inserts', sa.Column('created_at', sa.DateTime(), server_default=sa.text(\"TIMEZONE('utc', now())\"), nullable=False))\n    op.create_unique_constraint(None, 'text_inserts', ['user_id'])\n    op.drop_constraint(op.f('text_inserts_user_id_fkey'), 'text_inserts', type_='foreignkey')\n    op.create_foreign_key(None, 'text_inserts', 'users', ['user_id'], ['id'])\n    op.drop_column('text_inserts', 'content')\n    # ### end Alembic commands ###\ndef downgrade() -> None:",
+        "detail": "migrations.versions.2025-09-22_add_foreign_key_user_id_users_id",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.2025-09-22_add_foreign_key_user_id_users_id",
+        "description": "migrations.versions.2025-09-22_add_foreign_key_user_id_users_id",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('text_inserts', sa.Column('content', sa.TEXT(), autoincrement=False, nullable=False))\n    op.drop_constraint(None, 'text_inserts', type_='foreignkey')\n    op.create_foreign_key(op.f('text_inserts_user_id_fkey'), 'text_inserts', 'users', ['user_id'], ['id'], ondelete='CASCADE')\n    op.drop_constraint(None, 'text_inserts', type_='unique')\n    op.drop_column('text_inserts', 'created_at')\n    op.drop_column('text_inserts', 'text')\n    # ### end Alembic commands ###",
+        "detail": "migrations.versions.2025-09-22_add_foreign_key_user_id_users_id",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.2025-09-22_add_new_model",
+        "description": "migrations.versions.2025-09-22_add_new_model",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('text_inserts',\n                    sa.Column('id', sa.BigInteger(),\n                              autoincrement=False, nullable=False),\n                    sa.Column('user_id', sa.BigInteger(), nullable=False),\n                    sa.Column('content', sa.Text(), nullable=False),\n                    sa.Column('created_at', sa.DateTime(), server_default=sa.text(\n                        \"TIMEZONE('utc', now())\"), nullable=False),\n                    sa.ForeignKeyConstraint(",
+        "detail": "migrations.versions.2025-09-22_add_new_model",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "migrations.versions.2025-09-22_add_new_model",
+        "description": "migrations.versions.2025-09-22_add_new_model",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_constraint(None, 'users', type_='unique')\n    op.alter_column('users', 'schedule',\n                    existing_type=sa.INTEGER(),\n                    nullable=True,\n                    existing_server_default=sa.text('5'))\n    op.alter_column('users', 'word_count',\n                    existing_type=sa.INTEGER(),\n                    nullable=True,",
+        "detail": "migrations.versions.2025-09-22_add_new_model",
         "documentation": {}
     },
     {

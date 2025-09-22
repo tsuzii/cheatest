@@ -20,7 +20,7 @@ def word_count_keyboard():
 async def handle_word_count(callback: CallbackQuery, session: AsyncSession):
     current = await get_word_count(session, callback.from_user.id)
     await callback.message.answer(
-        _(f"Текущее значение word_count = {current}\n\nВыберите новое:"),
+        _(f"Текущее значение слов в сообщении = {current}\n\nВыберите новое:"),
         reply_markup=word_count_keyboard()
     )
     await callback.answer()
@@ -30,7 +30,7 @@ async def handle_word_count(callback: CallbackQuery, session: AsyncSession):
 async def set_word_count_handler(callback: CallbackQuery, session: AsyncSession):
     value = int(callback.data.split(":")[1])
     await set_word_count(session, callback.from_user.id, value)
-    await callback.message.answer(_(f"✅ Установлено количество букв: {value}"))
+    await callback.message.answer(_(f"✅ Установлено количество слов: {value}"), reply_markup=back_button_keyboard())
     await callback.answer()
 
 
@@ -48,7 +48,7 @@ async def handle_schedule(callback: CallbackQuery, session: AsyncSession):
 async def set_schedule_handler(message: Message, session: AsyncSession):
     minutes = int(message.text)
     await set_schedule(session, message.from_user.id, minutes)
-    await message.answer(_(f"✅ Расписание обновлено: {minutes} минут"))
+    await message.answer(_(f"✅ Расписание обновлено: {minutes} минут"), reply_markup=back_button_keyboard())
 
 
 @router.callback_query(F.data == "menu")
